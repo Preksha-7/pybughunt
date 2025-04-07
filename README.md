@@ -13,8 +13,8 @@ A Python library for detecting logical and syntactical errors in Python code.
 
 ```bash
 # Install from source
-git clone https://github.com/yourusername/code-error-detector.git
-cd code-error-detector
+git clone https://github.com/Preksha-7/python-library.git
+cd python-library
 pip install -e .
 ```
 
