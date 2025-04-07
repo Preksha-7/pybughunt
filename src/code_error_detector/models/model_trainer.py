@@ -4,6 +4,7 @@ import ast
 import os
 import sys
 import pickle
+import glob
 from typing import Any, Dict, List, Tuple, Optional
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
@@ -196,21 +197,61 @@ class ModelTrainer:
         return self.model
 
 
-def train_from_codenetpy(dataset_path: str, output_path: str) -> str:
+def load_python_files_from_directory(directory: str) -> List[Dict]:
     """
-    Train a model using data from CodeNetPy.
+    Load Python files from a directory structure.
     
     Args:
-        dataset_path: Path to the CodeNetPy dataset
+        directory: Path to the directory containing Python files
+        
+    Returns:
+        List of dictionaries with code samples and error labels
+    """
+    dataset = []
+    
+    # Find all .py files recursively
+    py_files = glob.glob(os.path.join(directory, "**", "*.py"), recursive=True)
+    
+    for file_path in py_files:
+        try:
+            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                code = f.read()
+            
+            # Determine if the code has errors
+            has_error = False
+            try:
+                ast.parse(code)
+            except SyntaxError:
+                has_error = True
+            
+            # Create a dataset item
+            item = {
+                "code": code,
+                "has_error": has_error,
+                "path": file_path
+            }
+            
+            dataset.append(item)
+        except Exception as e:
+            print(f"Error loading file {file_path}: {e}")
+    
+    print(f"Loaded {len(dataset)} Python files from {directory}")
+    return dataset
+
+
+def train_from_codenetpy(dataset_path: str, output_path: str) -> str:
+    """
+    Train a model using Python files from a directory.
+    
+    Args:
+        dataset_path: Path to the directory containing Python files
         output_path: Path to save the trained model
         
     Returns:
         Path to the saved model
     """
-    from codenetpy import load_dataset
-    
-    # Load the dataset
-    dataset = load_dataset(dataset_path)
+    # Load the dataset from the directory
+    dataset = load_python_files_from_directory(dataset_path)
     
     # Extract code samples and error labels
     code_samples = []
