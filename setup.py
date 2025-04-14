@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="pybughunt",
-    version="0.1.1",
+    version="0.1.2",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     include_package_data=True,
@@ -16,6 +16,8 @@ setup(
     ],
     python_requires=">=3.8",
     description="A Python library for detecting logical and syntactical errors in Python code",
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     author="Preksha Upadhyay",
     author_email="prekshaupadhyay03@gmail.com",
     url="https://github.com/Preksha-7/pybughunt",
@@ -27,4 +29,5 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
     ],
+    license="MIT"
 )
