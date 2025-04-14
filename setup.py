@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="code_error_detector",
+    name="pybughunt",
     version="0.1.0",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
@@ -16,9 +16,9 @@ setup(
     ],
     python_requires=">=3.8",
     description="A Python library for detecting logical and syntactical errors in Python code",
-    author="Your Name",
-    author_email="your.email@example.com",
-    url="https://github.com/yourusername/code-error-detector",
+    author="Preksha Upadhyay",
+    author_email="prekshaupadhyay03@gmail.com",
+    url="https://github.com/Preksha-7/pybughunt",
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",

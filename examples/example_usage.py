@@ -1,6 +1,6 @@
 """Example usage of the code error detector."""
 
-from code_error_detector import CodeErrorDetector
+from pybughunt import CodeErrorDetector
 
 def main():
     """Run examples of code error detection."""
