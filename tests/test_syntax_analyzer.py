@@ -18,8 +18,7 @@ def hello():
 """
         errors = self.analyzer.analyze(code)
         self.assertEqual(len(errors), 1)
-        self.assertIn("parentheses", errors[0]["description"].lower())
-    
+        self.assertIn("was never closed", errors[0]["description"].lower())    
     def test_indentation_error(self):
         """Test detection of indentation errors."""
         code = """

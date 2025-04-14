@@ -5,6 +5,7 @@ import re
 import tokenize
 from io import StringIO
 from typing import Dict, List, Optional
+from io import BytesIO
 
 class SyntaxAnalyzer:
     """Class for analyzing Python code for syntax errors."""
@@ -63,7 +64,7 @@ class SyntaxAnalyzer:
         # Check for indentation and whitespace issues
         if not errors:
             try:
-                tokens = list(tokenize.tokenize(StringIO(code).readline))
+                tokens = list(tokenize.tokenize(BytesIO(code.encode('utf-8')).readline))
                 # Additional token-based checks could be implemented here
             except tokenize.TokenError as e:
                 errors.append({
