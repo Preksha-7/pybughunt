@@ -13,8 +13,8 @@ A Python library for detecting logical and syntactical errors in Python code.
 
 ```bash
 # Install from source
-git clone https://github.com/Preksha-7/python-library.git
-cd python-library
+git clone https://github.com/Preksha-7/pybughunt.git
+cd pybughunt
 pip install -e .
 ```
 
@@ -24,22 +24,22 @@ pip install -e .
 
 ```bash
 # Analyze Python files
-code_error_detector analyze file1.py file2.py
+pybughunt analyze file1.py file2.py
 
 # Analyze with custom model
-code_error_detector analyze file1.py --model path/to/model.pkl
+pybughunt analyze file1.py --model path/to/model.pkl
 
 # Output in JSON format
-code_error_detector analyze file1.py --format json --output results.json
+pybughunt analyze file1.py --format json --output results.json
 
 # Train a new model
-code_error_detector train --dataset path/to/dataset --output path/to/model.pkl
+pybughunt train --dataset path/to/dataset --output path/to/model.pkl
 ```
 
 ### Python API
 
 ```python
-from code_error_detector import CodeErrorDetector
+from pybughunt import CodeErrorDetector
 
 # Initialize the detector
 detector = CodeErrorDetector()
