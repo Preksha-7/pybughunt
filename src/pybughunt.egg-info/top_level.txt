@@ -1,1 +1,1 @@
-code_error_detector
+pybughunt

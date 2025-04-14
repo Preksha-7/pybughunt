@@ -3,5 +3,5 @@
 from .detector import CodeErrorDetector
 from .driver import main as quick_detect
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __all__ = ["CodeErrorDetector", "quick_detect"]
