@@ -1,6 +1,6 @@
 # PyBugHunt
 
-## Advanced Python Code Error Detection and Analysis
+## Advanced Python Code Error Detection and
 
 PyBugHunt is a sophisticated Python library designed to detect, analyze, and suggest fixes for both syntactical and logical errors in Python code. Leveraging a combination of static code analysis techniques and machine learning approaches, PyBugHunt offers developers a powerful tool to improve code quality and reduce debugging time.
 
