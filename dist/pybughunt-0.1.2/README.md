@@ -1,27 +1,3 @@
-Metadata-Version: 2.1
-Name: pybughunt
-Version: 0.1.2
-Summary: A Python library for detecting logical and syntactical errors in Python code
-Home-page: https://github.com/Preksha-7/pybughunt
-Author: Preksha Upadhyay
-Author-email: Preksha Upadhyay <prekshaupadhyay03@gmail.com>
-License: MIT
-Keywords: code,python,error,detection,static analysis
-Classifier: Development Status :: 3 - Alpha
-Classifier: Intended Audience :: Developers
-Classifier: Programming Language :: Python :: 3
-Classifier: Programming Language :: Python :: 3.8
-Classifier: Programming Language :: Python :: 3.9
-Requires-Python: >=3.8
-Description-Content-Type: text/markdown
-License-File: LICENSE
-Requires-Dist: numpy>=1.20.0
-Requires-Dist: scikit-learn>=1.0.0
-Requires-Dist: torch>=1.9.0
-Requires-Dist: transformers>=4.12.0
-Requires-Dist: astroid>=2.8.0
-Requires-Dist: pylint>=2.11.0
-
 # PyBugHunt
 
 ## Advanced Python Code Error Detection and Analysis
