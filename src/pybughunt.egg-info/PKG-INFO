@@ -1,4 +1,4 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: pybughunt
 Version: 0.1.2
 Summary: A Python library for detecting logical and syntactical errors in Python code
@@ -21,6 +21,10 @@ Requires-Dist: torch>=1.9.0
 Requires-Dist: transformers>=4.12.0
 Requires-Dist: astroid>=2.8.0
 Requires-Dist: pylint>=2.11.0
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
 
 # PyBugHunt
 
