@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="pybughunt",
-    version="0.1.3",
+    version="0.2.0",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     include_package_data=True,
@@ -10,7 +10,7 @@ setup(
         "numpy>=1.20.0",
         "scikit-learn>=1.0.0",
         "torch>=1.9.0",
-        "transformers>=4.12.0",
+        "transformers>=4.20.0",
         "astroid>=2.8.0",
         "pylint>=2.11.0",
     ],
